@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>踩踏天地就爱美脚 - 足部美学鉴赏与足疗指南</title>
+    <meta name="description" content="探索足部美学的极致体验，提供专业的足部护理指南、足部按摩技巧及足疗养生资讯，助您在繁忙生活中找回身心平衡。">
+    <meta name="keywords" content="踩踏天地就爱美脚,足部护理,足疗按摩,美足,足部养生,足部健康">
+    <style>
+        :root {
+            --primary-color: #d4a373;
+            --primary-dark: #b08968;
+            --secondary-color: #faedcd;
+            --text-main: #333333;
+            --text-light: #666666;
+            --bg-body: #fdfcf8;
+            --bg-card: #ffffff;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+            --border-radius: 8px;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-body);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--bg-card);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://picsum.photos/seed/feet_hero/1600/600') no-repeat center center/cover;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 0 1rem;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(212, 163, 115, 0.4);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--text-main);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+        }
+
+        /* Featured Categories */
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .category-card {
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+            padding: 2rem;
+            border: 1px solid #eee;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .category-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .category-card h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .category-card p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* Guide & Tips (Columns) */
+        .guide-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+        }
+
+        .guide-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .guide-item {
+            background: var(--bg-card);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+        }
+
+        .guide-icon {
+            background-color: var(--secondary-color);
+            color: var(--primary-dark);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-weight: bold;
+        }
+
+        .guide-content h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .guide-content p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .sidebar-widget {
+            background: var(--bg-card);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 100px;
+        }
+
+        .sidebar-widget h3 {
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .tips-list li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .tips-list li::before {
+            content: "•";
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* Product Showcase */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-img {
+            height: 180px;
+            width: 100%;
+            background-color: #eee;
+        }
+
+        .product-info {
+            padding: 1.5rem;
+        }
+
+        .product-tag {
+            font-size: 0.8rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .product-title {
+            font-size: 1.1rem;
+            margin: 0.5rem 0;
+            font-weight: 700;
+        }
+
+        .product-desc {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .product-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .price {
+            font-size: 1.2rem;
+            color: var(--primary-dark);
+            font-weight: 700;
+        }
+
+        /* FAQ Section */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        details {
+            background: var(--bg-card);
+            margin-bottom: 1rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        summary {
+            padding: 1.2rem;
+            cursor: pointer;
+            font-weight: 600;
+            list-style: none;
+            position: relative;
+            padding-right: 3rem;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: "+";
+            position: absolute;
+            right: 1.2rem;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            line-height: 1;
+        }
+
+        details[open] summary::after {
+            content: "-";
+        }
+
+        .faq-content {
+            padding: 0 1.2rem 1.2rem;
+            color: var(--text-light);
+            border-top: 1px solid #f0f0f0;
+            padding-top: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c2c2c;
+            color: #ccc;
+            padding: 3rem 0;
+            margin-top: 4rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #444;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-wrap: wrap;
+            }
+            
+            nav {
+                display: none;
+                width: 100%;
+                margin-top: 1rem;
+            }
+
+            nav.open {
+                display: block;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .guide-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar-widget {
+                position: static;
+                margin-top: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">踩踏天地<span>就爱美脚</span></a>
+            <div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="#home" class="active">首页</a></li>
+                    <li><a href="#guide">美足指南</a></li>
+                    <li><a href="#products">足部护理</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                    <li><a href="#contact">联系我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>探索足部美学的极致体验</h1>
+                <p>从足部护理到专业按摩，为您提供全方位的美足知识与产品推荐</p>
+                <a href="#guide" class="btn">开始探索</a>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="container">
+            <div class="section-title">
+                <h2>美足分类导航</h2>
+                <p>根据您的需求，选择最适合的足部护理方案</p>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon">🧖‍♀️</div>
+                    <h3>足部SPA</h3>
+                    <p>专业足浴按摩服务与技巧指导</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">🧴</div>
+                    <h3>足部护理</h3>
+                    <p>足膜、足霜、去角质产品推荐</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">👟</div>
+                    <h3>舒适鞋履</h3>
+                    <p>矫正足型与健康行走辅助装备</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">🦶</div>
+                    <h3>足部健康</h3>
+                    <p>足部疾病预防与矫正知识</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guide Section -->
+        <section id="guide" style="background-color: #fafafa;">
+            <div class="container">
+                <div class="section-title">
+                    <h2>美足实用指南</h2>
+                    <p>掌握正确方法，让双足焕发自然光彩</p>
+                </div>
+                <div class="guide-layout">
+                    <div class="guide-list">
+                        <div class="guide-item">
+                            <div class="guide-icon">1</div>
+                            <div class="guide-content">
+                                <h3>日常足部清洁与去角质</h3>
+                                <p>每天用温水泡脚15-20分钟，配合温和的磨脚石或足部磨砂膏，去除死皮，预防鸡眼和厚茧。注意水温不宜过高，避免烫伤。</p>
+                            </div>
+                        </div>
+                        <div class="guide-item">
+                            <div class="guide-icon">2</div>
+                            <div class="guide-content">
+                                <h3>足部保湿与修护</h3>
+                                <p>清洁后立即涂抹足霜，重点按摩足跟和脚趾缝隙。选择含有尿素、维生素E或神经酰胺成分的护理产品，锁住水分。</p>
+                            </div>
+                        </div>
+                        <div class="guide-item">
+                            <div class="guide-icon">3</div>
+                            <div class="guide-content">
+                                <h3>足部按摩手法</h3>
+                                <p>通过按压足底反射区促进血液循环。大拇指按压足心涌泉穴，指关节推按足背，能有效缓解疲劳，改善睡眠质量。</p>
+                            </div>
+                        </div>
+                        <div class="guide-item">
+                            <div class="guide-icon">4</div>
+                            <div class="guide-content">
+                                <h3>选择合适的鞋子</h3>
+                                <p>避免长期穿高跟鞋或尖头鞋，选择鞋底有弹性、鞋头宽松的鞋子，保护足弓和脚趾，预防拇外翻等足部畸形。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <aside>
+                        <div class="sidebar-widget">
+                            <h3>每日足部护理小贴士</h3>
+                            <ul class="tips-list">
+                                <li>睡前尝试热水泡脚，加入艾草或生姜。</li>
+                                <li>定期修剪脚指甲，避免过短或边缘参差不齐。</li>
+                                <li>保持袜子的清洁与透气，避免真菌感染。</li>
+                                <li>运动后及时放松足部肌肉，拉伸跟腱。</li>
+                                <li>观察足部皮肤变化，发现异常及时就医。</li>
+                            </ul>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="container">
+            <div class="section-title">
+                <h2>精选护理产品</h2>
+                <p>甄选优质足部护理好物，呵护您的每一步</p>
+            </div>
+            <div class="product-grid">
+                <article class="product-card">
+                    <img src="https://picsum.photos/seed/foot_cream/400/300" alt="深层滋润足霜" class="product-img">
+                    <div class="product-info">
+                        <span class="product-tag">热门推荐</span>
+                        <h3 class="product-title">深层滋润修复足霜</h3>
+                        <p class="product-desc">含有高浓度尿素，快速软化死皮，深层补水。</p>
+                        <div class="product-footer">
+                            <span class="price">¥89.00</span>
+                            <button class="btn" style="padding: 0.4rem 1rem; font-size: 0.9rem;">查看详情</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img src="https://picsum.photos/seed/foot_massager/400/300" alt="足部按摩仪" class="product-img">
+                    <div class="product-info">
+                        <span class="product-tag">科技养生</span>
+                        <h3 class="product-title">全自动足部按摩仪</h3>
+                        <p class="product-desc">热敷+震动+气囊挤压，全方位缓解足部疲劳。</p>
+                        <div class="product-footer">
+                            <span class="price">¥299.00</span>
+                            <button class="btn" style="padding: 0.4rem 1rem; font-size: 0.9rem;">查看详情</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img src="https://picsum.photos/seed/foot_mask/400/300" alt="足膜" class="product-img">
+                    <div class="product-info">
+                        <span class="product-tag">急救护理</span>
+                        <h3 class="product-title">七天焕肤足膜套装</h3>
+                        <p class="product-desc">快速去死皮，嫩滑双足，适合聚会前使用。</p>
+                        <div class="product-footer">
+                            <span class="price">¥45.00</span>
+                            <button class="btn" style="padding: 0.4rem 1rem; font-size: 0.9rem;">查看详情</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img src="https://picsum.photos/seed/toe_separator/400/300" alt="足趾分隔器" class="product-img">
+                    <div class="product-info">
+                        <span class="product-tag">矫正辅助</span>
+                        <h3 class="product-title">透气硅胶足趾分隔器</h3>
+                        <p class="product-desc">防止脚趾摩擦，缓解拇外翻压力，舒适隐形。</p>
+                        <div class="product-footer">
+                            <span class="price">¥32.00</span>
+                            <button class="btn" style="padding: 0.4rem 1rem; font-size: 0.9rem;">查看详情</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" style="background-color: #fafafa;">
+            <div class="container">
+                <div class="section-title">
+                    <h2>常见问题解答</h2>
+                    <p>关于足部护理的疑惑，这里都有答案</p>
+                </div>
+                <div class="faq-container">
+                    <details>
+                        <summary>泡脚时间越长越好吗？</summary>
+                        <div class="faq-content">
+                            不建议长时间泡脚。一般建议每次泡脚15-20分钟即可，水温控制在40℃左右。时间过长或水温过高可能导致头晕、心慌，甚至皮肤烫伤，尤其是患有糖尿病或循环系统疾病的人群更需注意。
+                        </div>
+                    </details>
+                    <details>
+                        <summary>如何判断足部是否有真菌感染？</summary>
+                        <div class="faq-content">
+                            真菌感染通常表现为足部皮肤发痒、脱皮、起水疱，或者出现红斑、鳞屑。脚趾缝间潮湿发白是常见特征。如果出现这些症状，建议停止使用公共浴池的拖鞋，并及时就医确诊。
+                        </div>
+                    </details>
+                    <details>
+                        <summary>按摩足底真的能缓解全身疲劳吗？</summary>
+                        <div class="faq-content">
+                            足底按摩基于反射区理论，通过刺激足部特定区域，理论上可以促进血液循环，调节神经系统，从而达到缓解疲劳、改善睡眠的效果。虽然不能替代医疗，但作为一种辅助放松手段是有效的。
+                        </div>
+                    </details>
+                    <details>
+                        <summary>经常穿高跟鞋对脚有什么伤害？</summary>
+                        <div class="faq-content">
+                            高跟鞋会增加足弓压力，长期穿着容易导致足底筋膜炎、拇外翻、锤状趾以及小腿肌肉紧张。建议尽量减少穿高跟鞋的频率，并在非正式场合选择鞋跟高度在3厘米以下的舒适鞋履。
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="container" style="text-align: center; padding: 3rem 0;">
+            <div style="background-color: var(--primary-color); color: white; padding: 3rem; border-radius: var(--border-radius);">
+                <h2 style="margin-bottom: 1rem;">准备好拥有健康的双脚了吗？</h2>
+                <p style="margin-bottom: 2rem; opacity: 0.9;">关注我们，获取更多足部护理技巧与产品资讯。</p>
+                <button class="btn" style="background-color: white; color: var(--primary-color);">订阅我们的周刊</button>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于踩踏天地就爱美脚</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.8;">
+                        我们致力于传播科学的足部护理知识，分享优质的美足产品，帮助每一位读者在忙碌的生活中呵护好自己的双脚，享受每一步的舒适与自在。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#home">回到首页</a></li>
+                        <li><a href="#guide">美足指南</a></li>
+                        <li><a href="#products">护理产品</a></li>
+                        <li><a href="#faq">常见问题</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li>邮箱：contact@example.com</li>
+                        <li>电话：400-123-4567</li>
+                        <li>地址：足部健康大道88号</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 踩踏天地就爱美脚 版权所有. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <script>
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const nav = document.getElementById('main-nav');
+            nav.classList.toggle('open');
+        }
+
+        // Smooth Scroll for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    // Close mobile menu if open
+                    document.getElementById('main-nav').classList.remove('open');
+                }
+            });
+        });
+
+        // Active Link Highlighting on Scroll
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const sections = document.querySelectorAll('section, footer');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 150)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            document.querySelectorAll('nav ul li a').forEach(a => {
+                a.classList.remove('active');
+                if (a.getAttribute('href').includes(current)) {
+                    a.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
