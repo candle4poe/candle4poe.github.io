@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>火影忍者在线观看全集-热血动漫全集免费观看平台</title>
+    <meta name="description" content="提供火影忍者全集在线观看，包含鸣人、佐助、卡卡西等经典角色剧情解析。高清无删减，随时随地畅享热血忍界冒险之旅。">
+    <meta name="keywords" content="火影忍者, 火影忍者在线观看, 火影忍者全集, 热血动漫, 漫画推荐">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #ff9800;
+            --secondary-color: #2c3e50;
+            --bg-color: #f4f6f8;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-light: #666666;
+            --border-radius: 8px;
+            --spacing-unit: 16px;
+            --header-height: 70px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding-top: var(--header-height);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: var(--header-height);
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 24px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--secondary-color);
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .search-bar {
+            display: flex;
+            gap: 8px;
+        }
+
+        .search-bar input {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        .search-bar button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 400px;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://picsum.photos/seed/naruto_bg/1200/400') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 16px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        .btn-main {
+            display: inline-block;
+            margin-top: 24px;
+            padding: 12px 32px;
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: bold;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(255, 152, 0, 0.4);
+        }
+
+        .btn-main:hover {
+            background-color: #e68900;
+            transform: translateY(-2px);
+        }
+
+        /* Section Titles */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+            border-left: 5px solid var(--primary-color);
+            padding-left: 16px;
+        }
+
+        .section-header h2 {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+        }
+
+        .section-header a {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .section-header a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Grid Layouts */
+        .anime-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 24px;
+            margin-bottom: 48px;
+        }
+
+        .anime-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .anime-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .card-image {
+            position: relative;
+            width: 100%;
+            padding-top: 140%; /* Aspect Ratio */
+            overflow: hidden;
+        }
+
+        .card-image img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background-color: rgba(0,0,0,0.7);
+            color: white;
+            padding: 2px 8px;
+            font-size: 0.75rem;
+            border-radius: 4px;
+        }
+
+        .card-content {
+            padding: 16px;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .card-info {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        .tag {
+            background-color: #f0f0f0;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.75rem;
+        }
+
+        /* Episodes List */
+        .episodes-section {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 48px;
+        }
+
+        .episodes-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            gap: 12px;
+        }
+
+        .ep-btn {
+            display: block;
+            text-align: center;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border: 1px solid #eee;
+            border-radius: 4px;
+            color: var(--text-main);
+            font-size: 0.9rem;
+        }
+
+        .ep-btn:hover {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        /* Features */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 32px;
+            margin-bottom: 48px;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 24px;
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            color: var(--primary-color);
+        }
+
+        .feature-item h3 {
+            margin-bottom: 12px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: #ccc;
+            padding: 48px 0 24px;
+            margin-top: auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 32px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 24px;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                height: auto;
+                padding: 10px 0;
+                gap: 10px;
+            }
+            
+            nav ul {
+                gap: 12px;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .search-bar {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <a href="#" class="logo">
+                <span>🔥</span> 热血动漫库
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">动漫分类</a></li>
+                    <li><a href="#">排行榜</a></li>
+                    <li><a href="#">最新更新</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="搜索动漫名称...">
+                <button>搜索</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>火影忍者在线观看全集</h1>
+                <p>跟随漩涡鸣人踏上成为火影的伟大旅程，重温木叶村的热血回忆，体验羁绊与成长的感动瞬间。</p>
+                <a href="#play-section" class="btn-main">立即观看全集</a>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- Intro / Features -->
+            <section class="features">
+                <div class="feature-item">
+                    <div class="feature-icon">📺</div>
+                    <h3>高清画质</h3>
+                    <p>支持多种清晰度切换，随时随地享受流畅的视觉体验。</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">⚡</div>
+                    <h3>极速加载</h3>
+                    <p>智能CDN加速技术，秒开不卡顿，告别等待。</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📂</div>
+                    <h3>全集收录</h3>
+                    <p>完整收录所有季数与剧场版，补番党首选平台。</p>
+                </div>
+            </section>
+
+            <!-- Main Anime Content -->
+            <section id="play-section">
+                <div class="section-header">
+                    <h2>火影忍者</h2>
+                    <a href="#">查看更多 ></a>
+                </div>
+
+                <article class="anime-card" onclick="alert('正在跳转至播放页面...')">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/naruto1/400/560" alt="火影忍者海报">
+                        <span class="card-badge">连载中</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">火影忍者 疾风传</h3>
+                        <div class="card-info">
+                            <span>类型: 动作 / 冒险</span>
+                            <span>评分: 9.8</span>
+                        </div>
+                    </div>
+                </article>
+
+                <div class="episodes-section">
+                    <h3>最新更新剧集</h3>
+                    <div class="episodes-list">
+                        <a href="#" class="ep-btn">第 720 集</a>
+                        <a href="#" class="ep-btn">第 719 集</a>
+                        <a href="#" class="ep-btn">第 718 集</a>
+                        <a href="#" class="ep-btn">第 717 集</a>
+                        <a href="#" class="ep-btn">第 716 集</a>
+                        <a href="#" class="ep-btn">第 715 集</a>
+                        <a href="#" class="ep-btn">第 714 集</a>
+                        <a href="#" class="ep-btn">第 713 集</a>
+                        <a href="#" class="ep-btn">第 712 集</a>
+                        <a href="#" class="ep-btn">第 711 集</a>
+                        <a href="#" class="ep-btn">第 710 集</a>
+                        <a href="#" class="ep-btn">第 709 集</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Related Anime -->
+            <section>
+                <div class="section-header">
+                    <h2>同类型推荐</h2>
+                    <a href="#">更多推荐 ></a>
+                </div>
+                <div class="anime-grid">
+                    <article class="anime-card">
+                        <div class="card-image">
+                            <img src="https://picsum.photos/seed/boruto/400/560" alt="博人传">
+                            <span class="card-badge">推荐</span>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">博人传：火影忍者新时代</h3>
+                            <div class="card-info">
+                                <span>后续续作</span>
+                                <span class="tag">热门</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="anime-card">
+                        <div class="card-image">
+                            <img src="https://picsum.photos/seed/naruto_shippuden/400/560" alt="火影忍者疾风传">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">火影忍者 疾风传</h3>
+                            <div class="card-info">
+                                <span>经典必看</span>
+                                <span class="tag">HD</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="anime-card">
+                        <div class="card-image">
+                            <img src="https://picsum.photos/seed/ninjas/400/560" alt="忍者大战">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">忍者大战特别篇</h3>
+                            <div class="card-info">
+                                <span>剧场版</span>
+                                <span class="tag">电影</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="anime-card">
+                        <div class="card-image">
+                            <img src="https://picsum.photos/seed/anime/400/560" alt="热血动漫">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">海贼王</h3>
+                            <div class="card-info">
+                                <span>热血</span>
+                                <span class="tag">冒险</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <p>本站致力于为动漫爱好者提供最优质的在线观看体验，收录海量高清动漫资源，更新及时，画质清晰。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#">首页推荐</a></li>
+                        <li><a href="#">最新上线</a></li>
+                        <li><a href="#">高分榜单</a></li>
+                        <li><a href="#">用户反馈</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>热门标签</h4>
+                    <ul>
+                        <li><a href="#">火影忍者</a></li>
+                        <li><a href="#">海贼王</a></li>
+                        <li><a href="#">名侦探柯南</a></li>
+                        <li><a href="#">死神</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 热血动漫库. All Rights Reserved. 本站仅提供资源展示与聚合服务，所有内容版权归原作者所有。</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
