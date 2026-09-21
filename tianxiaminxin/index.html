@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天下民心-传统人文与当代社会观察平台</title>
+    <meta name="description" content="天下民心是一个专注于传统文化复兴、社会热点分析及人文精神探讨的综合平台。我们致力于记录时代变迁中的民心向背，探讨公共事务中的道德伦理，分享具有深度的人文思考与历史回响。">
+    <meta name="keywords" content="天下民心,人文,社会观察,传统文化,道德伦理,公共事务,历史回响">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8B4513; /* SaddleBrown */
+            --secondary-color: #D2691E; /* Chocolate */
+            --accent-color: #F5DEB3; /* Wheat */
+            --text-dark: #2C2C2C;
+            --text-gray: #666666;
+            --bg-light: #F9F7F2;
+            --bg-white: #FFFFFF;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+            --border-radius: 8px;
+            --shadow: 0 4px 6px rgba(0,0,0,0.05);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Layout Utilities */
+        .container {
+            width: 100%;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section-padding {
+            padding: 4rem 0;
+        }
+
+        .grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .grid-2 { grid-template-columns: repeat(2, 1fr); }
+        .grid-3 { grid-template-columns: repeat(3, 1fr); }
+        .grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            line-height: 1.3;
+            color: var(--text-dark);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-gray);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--bg-white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--text-dark);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-dark);
+            font-size: 1rem;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.6rem 1.2rem;
+            border-radius: 4px;
+            font-weight: 500;
+            cursor: pointer;
+            border: none;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .btn-outline {
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://picsum.photos/seed/heritage/1920/800') no-repeat center center/cover;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 0 1rem;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Features / Core Values */
+        .features {
+            background-color: var(--bg-white);
+        }
+
+        .feature-card {
+            padding: 2rem;
+            text-align: center;
+            background: var(--bg-light);
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+
+        /* Section Styles */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .section-header h2 {
+            margin-bottom: 0;
+        }
+
+        .view-all {
+            font-size: 0.9rem;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        /* Article Cards */
+        .article-card {
+            background: var(--bg-white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .card-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .article-card:hover .card-image img {
+            transform: scale(1.05);
+        }
+
+        .card-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-meta {
+            font-size: 0.85rem;
+            color: var(--text-gray);
+            margin-bottom: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .tag {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .card-excerpt {
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-gray);
+            flex-grow: 1;
+        }
+
+        .read-more {
+            color: var(--primary-color);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Sidebar Layout */
+        .content-wrapper {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+        }
+
+        /* Sidebar */
+        .sidebar-widget {
+            background: var(--bg-white);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+        }
+
+        .sidebar-widget h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 0.8rem;
+        }
+
+        .hot-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .hot-list li:last-child {
+            border-bottom: none;
+        }
+
+        .hot-list a {
+            display: block;
+            font-size: 0.95rem;
+            color: var(--text-dark);
+        }
+
+        .hot-list a:hover {
+            color: var(--primary-color);
+        }
+
+        .hot-number {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            line-height: 20px;
+            border-radius: 50%;
+            font-size: 0.8rem;
+            margin-right: 0.5rem;
+        }
+
+        /* Quote Section */
+        .quote-section {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+        }
+
+        .quote-text {
+            font-size: 1.5rem;
+            font-style: italic;
+            margin-bottom: 1rem;
+            font-family: "Georgia", serif;
+        }
+
+        .quote-author {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            background: var(--bg-white);
+            border-radius: var(--border-radius);
+            margin-bottom: 1rem;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            background-color: var(--bg-white);
+        }
+
+        .faq-question:hover {
+            background-color: #fafafa;
+        }
+
+        .faq-answer {
+            padding: 0 1.2rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            background-color: var(--bg-light);
+            color: var(--text-gray);
+        }
+
+        .faq-answer.open {
+            padding: 1.2rem;
+            max-height: 200px; /* Approximate height */
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: #ccc;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .grid-4 { grid-template-columns: repeat(3, 1fr); }
+            .content-wrapper { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 2.2rem; }
+        }
+
+        @media (max-width: 768px) {
+            .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+            .header-inner { flex-direction: column; height: auto; padding: 1rem 0; }
+            nav ul { flex-wrap: wrap; justify-content: center; margin: 1rem 0; gap: 1rem; }
+            .hero { height: 400px; }
+            .hero h1 { font-size: 1.8rem; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 480px) {
+            .footer-grid { grid-template-columns: 1fr; }
+            .btn { width: 100%; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                <span>天下民心</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">人文观察</a></li>
+                    <li><a href="#">社会热点</a></li>
+                    <li><a href="#">传统文化</a></li>
+                    <li><a href="#">道德伦理</a></li>
+                    <li><a href="#">关于我们</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="btn btn-outline" onclick="alert('请访问关于我们页面了解详情。')">联系投稿</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>洞察时代脉搏，守护人文精神</h1>
+            <p>记录社会变迁中的民心向背，探讨公共事务中的道德伦理，为现代文明寻找安身立命的根基。</p>
+            <div style="display: flex; gap: 1rem; justify-content: center;">
+                <a href="#latest" class="btn btn-primary">阅读最新文章</a>
+                <a href="#about" class="btn btn-outline" style="color: white; border-color: white;">了解更多</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values -->
+    <section class="section-padding features">
+        <div class="container">
+            <div class="grid grid-4">
+                <article class="feature-card">
+                    <div class="feature-icon">👁️</div>
+                    <h3>深度观察</h3>
+                    <p>拒绝碎片化信息，从社会学、历史学角度剖析社会现象背后的深层逻辑。</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">📜</div>
+                    <h3>文化溯源</h3>
+                    <p>挖掘传统智慧在现代社会的应用价值，弘扬优秀传统文化，增强文化自信。</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">⚖️</div>
+                    <h3>理性思辨</h3>
+                    <p>在热点事件中保持冷静，倡导理性讨论，维护健康的网络舆论环境。</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">🤝</div>
+                    <h3>民心所向</h3>
+                    <p>关注民生福祉，倾听基层声音，为构建和谐社会提供建设性意见。</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Area -->
+    <main class="container section-padding" id="latest">
+        <div class="content-wrapper">
+            
+            <!-- Left Column: Articles -->
+            <div class="main-content">
+                <div class="section-header">
+                    <h2>最新深度文章</h2>
+                    <a href="#" class="view-all">查看更多 &rarr;</a>
+                </div>
+
+                <div class="grid grid-2">
+                    <!-- Article 1 -->
+                    <article class="article-card">
+                        <div class="card-image">
+                            <img src="https://picsum.photos/seed/community/600/400" alt="社区治理">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span class="tag">社会观察</span>
+                                <time>2023-10-24</time>
+                            </div>
+                            <h3 class="card-title"><a href="#">基层治理中的“民心工程”：从网格化管理到邻里互助</a></h3>
+                            <p class="card-excerpt">探讨现代社区治理模式如何有效凝聚民心，化解基层矛盾，构建共建共治共享的社会治理格局。</p>
+                            <a href="#" class="read-more">阅读全文 &rarr;</a>
+                        </div>
+                    </article>
+
+                    <!-- Article 2 -->
+                    <article class="article-card">
+                        <div class="card-image">
+                            <img src="https://picsum.photos/seed/heritage/600/400" alt="传统节日">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span class="tag">传统文化</span>
+                                <time>2023-10-22</time>
+                            </div>
+                            <h3 class="card-title"><a href="#">传统节日文化的现代传承：在快节奏生活中寻找归属感</a></h3>
+                            <p class="card-excerpt">分析春节、中秋等传统节日在当代社会的意义演变，以及如何通过创新形式让传统文化焕发新生。</p>
+                            <a href="#" class="read-more">阅读全文 &rarr;</a>
+                        </div>
+                    </article>
+
+                    <!-- Article 3 -->
+                    <article class="article-card">
+                        <div class="card-image">
+                            <img src="https://picsum.photos/seed/ethics/600/400" alt="道德伦理">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span class="tag">道德伦理</span>
+                                <time>2023-10-20</time>
+                            </div>
+                            <h3 class="card-title"><a href="#">算法时代的隐私边界：技术进步不能以牺牲隐私为代价</a></h3>
+                            <p class="card-excerpt">面对大数据的精准推送，我们应如何坚守个人隐私的底线，平衡便利与安全的关系。</p>
+                            <a href="#" class="read-more">阅读全文 &rarr;</a>
+                        </div>
+                    </article>
+
+                    <!-- Article 4 -->
+                    <article class="article-card">
+                        <div class="card-image">
+                            <img src="https://picsum.photos/seed/history/600/400" alt="历史回响">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span class="tag">历史回响</span>
+                                <time>2023-10-18</time>
+                            </div>
+                            <h3 class="card-title"><a href="#">从历史经验看公共危机中的民心凝聚</a></h3>
+                            <p class="card-excerpt">回顾历史上重大公共卫生事件中，政府与民众的互动如何影响国家的命运与民心的向背。</p>
+                            <a href="#" class="read-more">阅读全文 &rarr;</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Right Column: Sidebar -->
+            <aside class="sidebar">
+                <!-- About Widget -->
+                <div class="sidebar-widget" id="about">
+                    <h3>关于平台</h3>
+                    <p style="font-size: 0.9rem; margin-bottom: 1rem;">“天下民心”致力于搭建一个理性、客观、有温度的思想交流平台。我们关注社会发展的每一个微小切面，倾听来自不同阶层的声音，共同探寻人类社会的进步之路。</p>
+                    <button class="btn btn-primary" style="width: 100%;">了解更多</button>
+                </div>
+
+                <!-- Hot List Widget -->
+                <div class="sidebar-widget">
+                    <h3>热门话题</h3>
+                    <ul class="hot-list">
+                        <li><a href="#"><span class="hot-number">1</span>乡村振兴战略下的基层变化</a></li>
+                        <li><a href="#"><span class="hot-number">2</span>数字化浪潮下的就业市场</a></li>
+                        <li><a href="#"><span class="hot-number">3</span>家庭教育的核心是人格培养</a></li>
+                        <li><a href="#"><span class="hot-number">4</span>城市更新：留住乡愁记忆</a></li>
+                        <li><a href="#"><span class="hot-number">5</span>网络时代的谣言治理</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter Widget -->
+                <div class="sidebar-widget">
+                    <h3>订阅周刊</h3>
+                    <p style="font-size: 0.9rem; margin-bottom: 1rem;">每周五发送，精选深度好文与热点评论。</p>
+                    <form onsubmit="event.preventDefault(); alert('感谢您的订阅！');" style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <input type="email" placeholder="您的邮箱地址" style="padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px;">
+                        <button type="submit" class="btn btn-outline" style="width: 100%;">立即订阅</button>
+                    </form>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Quote Section -->
+    <section class="quote-section">
+        <div class="container">
+            <p class="quote-text">“民为邦本，本固邦宁。”</p>
+            <p class="quote-author">——《尚书》</p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section-padding" style="background-color: var(--bg-white);">
+        <div class="container" style="max-width: 800px;">
+            <h2 style="text-align: center; margin-bottom: 3rem;">常见问题</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>天下民心平台主要关注哪些领域？</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>我们主要关注社会热点分析、传统文化复兴、道德伦理探讨、历史经验借鉴以及民生福祉等多个维度，旨在提供有深度的人文思考。</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>如何向平台投稿或提出建议？</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>您可以通过页面顶部的“联系投稿”按钮与我们取得联系，我们的编辑团队会在收到邮件后尽快回复。我们也欢迎读者在评论区提出宝贵的建设性意见。</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>平台的内容是否保持中立客观？</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>是的，我们坚持理性思辨的原则，力求在呈现事实的基础上，提供多维度的分析和客观的视角，避免情绪化的宣泄。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">平台简介</a></li>
+                        <li><a href="#">编辑团队</a></li>
+                        <li><a href="#">加入我们</a></li>
+                        <li><a href="#">联系方式</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>内容栏目</h4>
+                    <ul>
+                        <li><a href="#">社会观察</a></li>
+                        <li><a href="#">传统文化</a></li>
+                        <li><a href="#">道德伦理</a></li>
+                        <li><a href="#">历史回响</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>法律声明</h4>
+                    <ul>
+                        <li><a href="#">版权政策</a></li>
+                        <li><a href="#">隐私条款</a></li>
+                        <li><a href="#">免责声明</a></li>
+                        <li><a href="#">使用指南</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关注我们</h4>
+                    <ul>
+                        <li><a href="#">微信公众号</a></li>
+                        <li><a href="#">新浪微博</a></li>
+                        <li><a href="#">知乎专栏</a></li>
+                        <li><a href="#">RSS订阅</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 天下民心 版权所有 | 保留所有权利</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ Accordion Logic
+        function toggleFaq(element) {
+            const answer = element.nextElementSibling;
+            const icon = element.querySelector('span:last-child');
+            
+            // Close all other open answers
+            const allAnswers = document.querySelectorAll('.faq-answer');
+            const allIcons = document.querySelectorAll('.faq-question span:last-child');
+            
+            allAnswers.forEach(item => {
+                if (item !== answer) {
+                    item.classList.remove('open');
+                    item.previousElementSibling.querySelector('span:last-child').textContent = '+';
+                }
+            });
+
+            // Toggle current
+            if (answer.classList.contains('open')) {
+                answer.classList.remove('open');
+                icon.textContent = '+';
+            } else {
+                answer.classList.add('open');
+                icon.textContent = '-';
+            }
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+  </html>
